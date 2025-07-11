@@ -5,22 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KanBan Board!</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="headingcontainer">
+        <h1>KanBan Board!</h1>
+    </div>
     <div class="container">
-        <div id="todo-board" class="board">
-            <h4>to-do</h4>
-            <p class="item">building KanBan board</p>
-            <p class="item">learning javascript</p>
+        <div class="board">
+            <h4>todo</h4>
+            <p class="items">kanban project</p>
+            <p class="items">countdown-timer project</p>
         </div>
         <div class="board">
-            <h4>in progress</h4>
+            <h4>progress</h4>
         </div>
         <div class="board">
             <h4>done</h4>
         </div>
     </div>
-    <button id="add-task-btn">add task</button>
+    <button>+</button>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

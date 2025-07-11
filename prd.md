@@ -7,10 +7,17 @@
 
 
 3. features & requirements:
-- drag and drop
+- add task
+- edit task
+- delete task
+- dynamically able to add boards
+- remove boards
+- a popup div which gets appeared on the screen (modal) when adding the new board which will ask for the name of the board and description and will contain 2 buttons init saying submit and cancel 
+- drag and drop(sorting)
+- board head shows count of the number of tasks it is carrying currently
 - theme changing
-- able to add new boards
 - saves everything in localstorage
+- time on everytask as when it was added
 
 4. use cases:
 - to list things properly and a kind of to-do for myself as i am doing the same thing writing todo then currently going on then completed so i need this for myself.
@@ -20,12 +27,11 @@
 - css
 - javascript
 
-
-7. success metrics:
+6. success metrics:
 - user should be able to add new tabs
 - everytask should be able to drag and droped properly
 - theme button (dark mode, light mode)
 - deployed
 
-8. timeline:
+7. timeline:
 - within three days from now that is by 13!
