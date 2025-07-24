@@ -1,5 +1,7 @@
 const addtaskbutton = document.getElementById("add-task-button");
 const todoboard = document.getElementById("todo-board");
+const contextmenu = document.getElementById("context-menu");
+rightclickedcard = null;
 
 function attachdragevents(target){
     target.addEventListener('dragstart', () => {
@@ -20,6 +22,11 @@ addtaskbutton.addEventListener('click', () => {
     taskcard.innerText = input;
     attachdragevents(taskcard);
     todoboard.appendChild(taskcard);
+    taskcard.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+        rightclickedcard = this;
+        showcontextmenu(event.pageX, event.pageY);
+    })
 
 })
 
@@ -36,3 +43,12 @@ allboards.forEach((board) => {
         board.appendChild(flyingelemnt);
     });
 });
+
+function showcontextmenu(x, y) {
+    contextmenu.style.left = `${x}px`;
+    contextmenu.style.top = `${y}px`;
+    contextmenu.style.display = "block";
+}
+document.addEventListener("click", () => {
+    contextmenu.style.display = "none";
+})

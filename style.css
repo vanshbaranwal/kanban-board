@@ -65,9 +65,38 @@ button:hover{
     color: limegreen;
     margin: 10px 5px;
     text-align: center;
+    position: relative;
     cursor: pointer;
 }
 .item:hover{
     background-color: white;
     color: red;
+}
+
+.context-menu{
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid grey;
+    border-radius: 4px;
+    display: none;
+    position: absolute;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#li-edit{
+    border-bottom: 2px solid grey;
+}
+#li-edit:hover{
+    background-color: white;
+    color: black;
+}
+#li-delete:hover{
+    background-color: white;
+    color: black;
+}
+.context-menu ul li{
+    text-align: center;
+    list-style: none;
+    padding: 8px 20px;
 }
