@@ -14,12 +14,13 @@ function attachdragevents(target){
 
 addtaskbutton.addEventListener('click', () => {
     const input = prompt("what is the task??");
+    const taskdate = new Date().toLocaleString();
     if(!input) return
 
     const taskcard = document.createElement('p');
     taskcard.classList.add("item");
     taskcard.setAttribute("draggable", true)
-    taskcard.innerText = input;
+    taskcard.innerHTML = `<span>${input}</span><br><small class="time">${taskdate}</small>`;
     attachdragevents(taskcard);
     todoboard.appendChild(taskcard);
     taskcard.addEventListener('contextmenu', function(event) {
@@ -57,7 +58,8 @@ function edittask(){
     if(rightclickedcard !== null){
         const newtasktext = prompt("edit task - ",rightclickedcard.textContent);
         if(newtasktext !== ""){
-            rightclickedcard.textContent = newtasktext;
+            const taskdate = new Date().toLocaleString();
+            rightclickedcard.innerHTML = `<span>${newtasktext}</span><br><small class="time">${taskdate}</small>`;
         }
     }
 }

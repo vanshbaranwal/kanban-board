@@ -27,6 +27,8 @@ body{
     padding: 25px;
 }
 h4{
+    text-align: center;
+    color: grey;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 30px;
 }
@@ -64,10 +66,12 @@ button:hover{
     border-width: 3px;
     color: limegreen;
     margin: 10px 5px;
-    text-align: center;
+    text-align: start;
+    padding-left: 5px;
     position: relative;
     cursor: pointer;
 }
+
 .item:hover{
     background-color: white;
     color: red;
@@ -99,4 +103,12 @@ button:hover{
     text-align: center;
     list-style: none;
     padding: 8px 20px;
+}
+
+.time{
+    text-align: end;
+    display: block;
+    font-size: 12px;
+    color: black;
+    padding-right: 4px;
 }
