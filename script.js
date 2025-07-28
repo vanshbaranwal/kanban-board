@@ -22,7 +22,7 @@ addtaskbutton.addEventListener('click', () => {
     taskcard.innerText = input;
     attachdragevents(taskcard);
     todoboard.appendChild(taskcard);
-    taskcard.addEventListener('contextmenu', (event) => {
+    taskcard.addEventListener('contextmenu', function(event) {
         event.preventDefault();
         rightclickedcard = this;
         showcontextmenu(event.pageX, event.pageY);
@@ -52,3 +52,18 @@ function showcontextmenu(x, y) {
 document.addEventListener("click", () => {
     contextmenu.style.display = "none";
 })
+
+function edittask(){
+    if(rightclickedcard !== null){
+        const newtasktext = prompt("edit task - ",rightclickedcard.textContent);
+        if(newtasktext !== ""){
+            rightclickedcard.textContent = newtasktext;
+        }
+    }
+}
+
+function deletetask(){
+    if(rightclickedcard !== null){
+        rightclickedcard.remove();
+    }
+}
