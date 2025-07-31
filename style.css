@@ -17,6 +17,7 @@ body{
     margin-top: 10px;
     max-width: 45vh;
     padding: 20px;
+    cursor: pointer;
 }
 .container{
     display: flex;
@@ -31,6 +32,7 @@ h4{
     color: grey;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 30px;
+    cursor: pointer;
 }
 .board{
     /* border: 5px solid black; */
@@ -61,20 +63,21 @@ button:hover{
 }
 
 .item{
-    border: 2px solid white;
-    background-color: yellow;
+    border: 2px solid grey;
+    background-color: grey;
     border-width: 3px;
-    color: limegreen;
+    color: black;
     margin: 10px 5px;
     text-align: start;
     padding-left: 5px;
     position: relative;
-    cursor: pointer;
 }
 
 .item:hover{
-    background-color: white;
-    color: red;
+    border: 2px solid gainsboro;
+    background-color: gainsboro;
+    color: black;
+    cursor: grab;
 }
 
 .context-menu{
